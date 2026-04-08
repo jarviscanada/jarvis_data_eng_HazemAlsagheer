@@ -22,7 +22,7 @@ timestamp=$(date +"%Y-%m-%d %H:%M:%S" | xargs)
 total_mem=$(cat /proc/meminfo | grep "MemTotal" | awk '{print $2}' | xargs)
 
 
-insert_stmt="INSERT INTO host_info( hostname, cpu_number, cpu_architecture, cpu_model, cpu_mhz, l2_cache, timestamp, total_mem) VALUES ('$hostname', '$cpu_number', '$cpu_architecture', '$cpu_model', '$cpu_mhz','$l2_cache', '$timestamp', '$total_mem')";
+insert_stmt="INSERT INTO host_info( hostname, cpu_number, cpu_architecture, cpu_model, cpu_mhz, l2_cache, timestamp, total_mem) VALUES ('$hostname',$cpu_number, '$cpu_architecture', '$cpu_model', $cpu_mhz,$l2_cache, '$timestamp', $total_mem)";
 
 export PGPASSWORD=$psql_password
 
