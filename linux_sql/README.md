@@ -24,7 +24,7 @@ The system is implemented using a set of Bash scripts that collect hardware spec
 
 ## Architecture
 
-![alt text](image.png)
+![Linux Cluster Diagram](assets/Linux%20Diagram.png)
 ## Scripts
 - *psql_docker.sh:* Initializes the PostgreSQL container and creates the required database schema (host_info and host_usage tables). The script validates input arguments and prevents duplicate table creation by throwing errors if the schema already exists.  
 **Usage:**./scripts/psql_docker.sh start|stop|create [db_username][db_password]
