@@ -1,6 +1,6 @@
 # Introduction
 
-The Linux Cluster Monitoring System is designed to collect and centralize hardware specifications and real-time resource usage metrics from multiple Linux machines. It targets system administrators and DevOps engineers who need visibility into system performance and capacity across a distributed environment.
+The Linux Cluster Monitoring System is designed to collect hardware specifications and real-time resource usage metrics from multiple Linux machines. It targets system administrators and DevOps engineers who need visibility into system performance and capacity across a distributed environment.
 
 The system follows a centralized architecture, where each node runs lightweight Bash scripts to extract CPU, memory, and disk usage metrics, and pushes the data to a PostgreSQL database for persistent storage and analysis. Docker is used to containerize the PostgreSQL instance, ensuring portability and consistent deployment, while Git manages version control and collaboration.
 
@@ -11,15 +11,15 @@ Three core scripts handle system operations: one initializes the database schema
 **Command:** ./psql_docker.sh create db_username db_password
 ### 2. Create Tables by running the ddl.sql script   
 **Command:** psql -h localhost -U db_username -d host_agent -f ddl.sql
-### 3. Collect hardware information/specification and write into the DB through the host_info.sh script 
+### 3. Collect hardware information/specification and write it into the DB through the host_info.sh script 
 **Command:** bash ./host_info.sh psql_host psql_port db_name psql_user psql_password
-### 4. Collect hardware usage data and write into the DB through the host_usage.sh script  
+### 4. Collect hardware usage data and write it into the DB through the host_usage.sh script  
 **Command:** bash ./host_usage.sh psql_host psql_port db_name psql_user psql_password
-### 5. Setup crontab to automate hardware usage data extraction in per minuter intervals  
+### 5. Set up a crontab to automate hardware usage data extraction in per-minute intervals  
 **Command:** crontab -e  
 **Command:** * * * * * bash /home/username/dev/jrvs-user-folder/linux_sql/host_agent/scripts/host_usage.sh localhost 5432 host_agent postgres password > /tmp/host_usage.log
 
-# Implemenation
+# Implementation
 The system is implemented using a set of Bash scripts that collect hardware specifications and real-time resource usage from the host machine. The host_info.sh script extracts static system data such as CPU details and total memory, while host_usage.sh captures dynamic metrics like CPU usage, memory availability, and disk I/O at regular intervals. A PostgreSQL database, running inside a Docker container, is used to store this data in two structured tables: host_info and host_usage. Data insertion is handled through parameterized SQL commands executed via the psql CLI. To enable continuous monitoring, the host_usage.sh script is scheduled using crontab to run every minute, ensuring consistent and up-to-date system metrics for analysis.  
 
 ## Architecture
@@ -47,8 +47,8 @@ The system is implemented using a set of Bash scripts that collect hardware spec
 | cpu_architecture | VARCHAR   | CPU architecture                |  
 | cpu_model        | VARCHAR   | CPU model                       |  
 | cpu_mhz          | FLOAT     | CPU speed in MHz                |  
-| l2_cache         | INT       | L2 cache size                   |  
-| total_mem        | INT       | Total memory in MB              |  
+| l2_cache         | INT       | L2 cache size in kB                  |  
+| total_mem        | INT       | Total memory in kB              |  
 | timestamp        | TIMESTAMP | Time when data was recorded     |  
 
 
@@ -56,21 +56,21 @@ The system is implemented using a set of Bash scripts that collect hardware spec
 | Column Name    | Data Type | Description                       |
 | -------------- | --------- | --------------------------------- |
 | timestamp      | TIMESTAMP | Time when data was recorded       |
-| host_id        | INT       | Foreign key referencing host_info |
+| host_id        | INT       | Foreign key referencing host_id from host_info |
 | memory_free    | INT       | Free memory in MB                 |
 | cpu_idle       | INT       | CPU idle percentage               |
-| cpu_kernel     | INT       | CPU usage in kernel mode          |
-| disk_io        | INT       | Disk I/O operations               |
+| cpu_kernel     | INT       | CPU usage in kernel mode  percentage        |
+| disk_io        | INT       | Number of disk I/O operations               |
 | disk_available | INT       | Available disk space in MB        |
 
 
 # Test
 
-The Bash scripts were tested in two stages: metric extraction validation and database integration validation.
+The Bash scripts were tested in two stages: metric-extraction validation and database-integration validation.
 
-For host_info.sh and host_usage.sh, each command used to extract system metrics (CPU, memory, disk, and hostname) was first tested independently in the terminal to verify correctness, formatting, and consistency of the output. Edge cases such as whitespace trimming and unit consistency were validated to ensure clean data extraction.
+For host_info.sh and host_usage.sh, each command used to extract system metrics (CPU, memory, disk, and hostname) was first tested independently in the terminal to verify correctness, formatting, and consistency of the output. 
 
-Once verified, the scripts were executed end-to-end, and SQL queries were used to confirm successful insertion into the PostgreSQL database. Validation included checking row counts, data types, and value accuracy using queries such as SELECT COUNT(*) and filtered queries on specific fields.
+Once verified, the scripts were executed, and SQL queries were used to confirm successful insertion into the PostgreSQL database. Validation included checking row counts, data types, and value accuracy using queries such as SELECT * FROM "tableName";.
 
 For psql_docker.sh, the script was tested by initializing the PostgreSQL container and verifying that the required tables were created with the correct schema.
 
@@ -79,9 +79,9 @@ For psql_docker.sh, the script was tested by initializing the PostgreSQL contain
 The system is deployed on a Linux environment, where Docker is used to provision a PostgreSQL container for persistent storage. The monitoring scripts run directly on each host machine and are scheduled using cron to execute at regular intervals.GitHub is used strictly for version control and code management.  
 
 # Improvements
-- I would add the units to the columns of the DB for better readability of the data. I will also stadradize a unit to help maintain consistency across.
+- I would add the units to the columns of the DB for better readability of the data. I will also standardize a unit to help maintain consistency across.
 
-- I would add a visualization layer by adding a dashboard which will show the latest data extracted, helping with getting easy dynamic updates.
+- I would add a visualization layer by adding a dashboard, which will show the latest data extracted, helping with getting easy and dynamic updates.
 
 - I would introduce an archive table for older usage records. Since the monitoring script inserts data on a recurring schedule, the host_usage table will continue growing over time. Archiving older records would help keep the main table smaller and more efficient for current reporting, while still preserving historical data for long-term analysis.
 
