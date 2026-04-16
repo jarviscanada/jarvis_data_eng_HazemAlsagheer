@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS cd.facilities (
 
 ## Logical ERD
 
-![ERD](ERD.png)
+![ERD](./assets/ERD.png)
 This logical ERD illustrates the database structure by defining its entities and their relationships. The cd.members entity has a recursive one-to-many relationship through the recommendedby foreign key, where a member can recommend zero or many other members, and each member can be recommended by zero or one member. The cd.bookings entity acts as a join table between cd.members and cd.facilities, capturing bookings made by members for facilities. As a result, a member can have zero or many bookings, and a facility can have zero or many bookings, while each booking is associated with exactly one member and one facility.
 
 ## SQL Questions & Solutions
