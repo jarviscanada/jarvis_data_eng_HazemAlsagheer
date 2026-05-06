@@ -14,20 +14,16 @@ import org.slf4j.LoggerFactory;
 public class JavaGrepImp implements JavaGrep {
   private final Logger logger = LoggerFactory.getLogger(JavaGrepImp.class);
   private String regex;
-  private String rootDir;
+  private String rootPath;
   private String outFile;
 
-  public JavaGrepImp(String regex, String rootDir, String outFile){
-    this.regex=regex;
-    this.rootDir=rootDir;
-    this.outFile=outFile;
-  }
+
 
   @Override
   public void process() throws IOException{
       List<String> matchLines = new ArrayList<>();
-      List<File> listOfFiles= this.listFiles(this.rootDir);
-      logger.info("Found {} files under {} ", listOfFiles.size(),this.rootDir);
+      List<File> listOfFiles= this.listFiles(this.rootPath);
+      logger.info("Found {} files under {} ", listOfFiles.size(),this.rootPath);
       logger.info("Reading Files for matches");
       for (File f :listOfFiles){
         List<String> lines = this.readLines(f);
@@ -114,12 +110,12 @@ public class JavaGrepImp implements JavaGrep {
 
   @Override
   public String getRootPath() {
-    return rootDir;
+    return this.rootPath;
   }
 
   @Override
   public void setRootPath(String rootPath) {
-    this.rootDir = rootPath;
+    this.rootPath = rootPath;
   }
 
   @Override
@@ -146,10 +142,10 @@ public class JavaGrepImp implements JavaGrep {
     if(args.length!=3){
       throw new IllegalArgumentException("USAGE: JavaGrep regex rootDir outFile");
     }
-    String regex=args[0];
-    String rootDir=args[1];
-    String outFile=args[2];
-    JavaGrep grep = new JavaGrepImp(regex, rootDir, outFile);
+    JavaGrep grep = new JavaGrepImp();
+    grep.setRegex(args[0]);
+    grep.setRootPath(args[1]);
+    grep.setOutFile(args[2]);
     try {
       grep.process();
     }catch(IOException e){

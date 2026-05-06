@@ -13,15 +13,18 @@ import org.junit.jupiter.api.*;
 
 class JavaGrepImpTest {
 
-  private String rootDir;
+  private String rootPath;
   private String outFile;
   private JavaGrepImp grep;
 
   @BeforeEach
   public void setup(){
-    this.rootDir = "./src/test/TestDir";
+    this.rootPath = "./src/test/TestDir";
     this.outFile = "./src/test/TestOutput.txt";
-    this.grep = new JavaGrepImp(".*=.*", rootDir, outFile);
+    this.grep = new JavaGrepImp();
+    grep.setRegex(".*=.*");
+    grep.setRootPath(rootPath);
+    grep.setOutFile(outFile);
 
   }
 
@@ -31,7 +34,7 @@ class JavaGrepImpTest {
     expected.add(new File("./src/test/TestDir/MixedTests.txt"));
     expected.add(new File("./src/test/TestDir/SubDir1/emptyFile.txt"));
     expected.add(new File("./src/test/TestDir/SubDir1/SpecialCharAndCaseSen.txt"));
-    assertTrue(grep.listFiles(this.rootDir).containsAll(expected));
+    assertTrue(grep.listFiles(this.rootPath).containsAll(expected));
   }
 
   @Test
@@ -81,7 +84,10 @@ class JavaGrepImpTest {
   @Test
   public void throwsIOException(){
     String badPath = "nonexistent_dir/output.txt";
-    JavaGrepImp grepTest = new JavaGrepImp(".*", "src/test", badPath);
+    JavaGrepImp grepTest = new JavaGrepImp();
+    grep.setRegex(".*");
+    grep.setRootPath("src/test");
+    grep.setOutFile(badPath);
     List<String> lines = new ArrayList<>();
     lines.add("Line Should Not Be Written");
     assertThrows(IOException.class, () -> { grepTest.writeToFile(lines); });
