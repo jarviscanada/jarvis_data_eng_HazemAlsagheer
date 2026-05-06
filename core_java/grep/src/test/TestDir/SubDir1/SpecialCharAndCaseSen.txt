@@ -1,0 +1,13 @@
+=
+==
+===
+
+
+key=value!
+key=value@
+key=value#
+
+
+Key=Value
+KEY=VALUE
+kEy=vAlUe
