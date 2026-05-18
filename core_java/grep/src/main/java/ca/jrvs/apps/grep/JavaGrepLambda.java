@@ -1,7 +1,10 @@
 package ca.jrvs.apps.grep;
 import java.io.*;
+import java.nio.file.Path;
 import java.util.List;
-public interface JavaGrep {
+import java.util.stream.Stream;
+
+public interface JavaGrepLambda {
   /**
    * Top level search workflow
    * @throws IOException
@@ -12,9 +15,9 @@ public interface JavaGrep {
   /**
    * Traverse a given directory and return all files
    * @param rootDir input directory
-   * @return files under the rootDir
+   * @return stream of files under the rootDir
    */
-  List<File> listFiles(String rootDir);
+  Stream<File> listFiles(String rootDir);
 
   /**
    * Read a file and return all the lines
@@ -26,7 +29,7 @@ public interface JavaGrep {
    * @throws IllegalArgumentException if a given inputFile is not a file
    * @throws IOException
    */
-  List<String> readLines (File inputFile) throws IOException;
+  Stream<String> readLines (File inputFile) throws IOException;
 
 
   /**
