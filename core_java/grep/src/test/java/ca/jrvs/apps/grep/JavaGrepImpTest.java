@@ -85,9 +85,9 @@ class JavaGrepImpTest {
   public void throwsIOException(){
     String badPath = "nonexistent_dir/output.txt";
     JavaGrepImp grepTest = new JavaGrepImp();
-    grep.setRegex(".*");
-    grep.setRootPath("src/test");
-    grep.setOutFile(badPath);
+    grepTest.setRegex(".*");
+    grepTest.setRootPath("src/test");
+    grepTest.setOutFile(badPath);
     List<String> lines = new ArrayList<>();
     lines.add("Line Should Not Be Written");
     assertThrows(IOException.class, () -> { grepTest.writeToFile(lines); });
