@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="ca.jrvs.apps.grep.JavaGrepImpTest" time="0.36" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="ca.jrvs.apps.practice.LambdaStreamExcImpTest" time="0.154" tests="14" errors="0" skipped="0" failures="0">
   <properties>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="file.encoding.pkg" value="sun.io"/>
@@ -58,11 +58,18 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="listFiles" classname="ca.jrvs.apps.grep.JavaGrepImpTest" time="0.252"/>
-  <testcase name="readLines" classname="ca.jrvs.apps.grep.JavaGrepImpTest" time="0.004"/>
-  <testcase name="throwsIllegalArgumentException" classname="ca.jrvs.apps.grep.JavaGrepImpTest" time="0.014"/>
-  <testcase name="containsPattern" classname="ca.jrvs.apps.grep.JavaGrepImpTest" time="0.003"/>
-  <testcase name="throwsIOException" classname="ca.jrvs.apps.grep.JavaGrepImpTest" time="0.003"/>
-  <testcase name="writeToFiles" classname="ca.jrvs.apps.grep.JavaGrepImpTest" time="0.004"/>
-  <testcase name="settersAndGetters" classname="ca.jrvs.apps.grep.JavaGrepImpTest" time="0.004"/>
+  <testcase name="createIntStream" classname="ca.jrvs.apps.practice.LambdaStreamExcImpTest" time="0.015"/>
+  <testcase name="filter" classname="ca.jrvs.apps.practice.LambdaStreamExcImpTest" time="0.012"/>
+  <testcase name="getOdd" classname="ca.jrvs.apps.practice.LambdaStreamExcImpTest" time="0.006"/>
+  <testcase name="printOdd" classname="ca.jrvs.apps.practice.LambdaStreamExcImpTest" time="0.006"/>
+  <testcase name="testCreateIntStreamRange" classname="ca.jrvs.apps.practice.LambdaStreamExcImpTest" time="0.002"/>
+  <testcase name="getLambdaPrinter" classname="ca.jrvs.apps.practice.LambdaStreamExcImpTest" time="0.002"/>
+  <testcase name="toList" classname="ca.jrvs.apps.practice.LambdaStreamExcImpTest" time="0.001"/>
+  <testcase name="testToListInt" classname="ca.jrvs.apps.practice.LambdaStreamExcImpTest" time="0.009"/>
+  <testcase name="printMessages" classname="ca.jrvs.apps.practice.LambdaStreamExcImpTest" time="0.01"/>
+  <testcase name="toUpperCase" classname="ca.jrvs.apps.practice.LambdaStreamExcImpTest" time="0.002"/>
+  <testcase name="squareRootIntStream" classname="ca.jrvs.apps.practice.LambdaStreamExcImpTest" time="0.008"/>
+  <testcase name="flatNestedInt" classname="ca.jrvs.apps.practice.LambdaStreamExcImpTest" time="0.005"/>
+  <testcase name="flatNestedInt2" classname="ca.jrvs.apps.practice.LambdaStreamExcImpTest" time="0.007"/>
+  <testcase name="createStrStream" classname="ca.jrvs.apps.practice.LambdaStreamExcImpTest" time="0.002"/>
 </testsuite>
