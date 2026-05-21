@@ -28,6 +28,11 @@
       "description": "Built a lightweight Linux cluster monitoring system where each node collects hardware specifications and real-time resource metrics and sends them to a centralized PostgreSQL database. Designed the system to give administrators clear visibility into CPU, memory, and disk usage for better resource allocation and capacity planning. Implemented a Bash-based agent using tools like vmstat and df, with data ingestion handled through a containerized database deployed via Docker. Automated data collection with cron and validated accuracy through script testing and SQL-based analysis.",
       "git_url": "https://github.com/jarviscanada/jarvis_data_eng_HazemAlsagheer/tree/develop/linux_sql",
       "name": "Linux Cluster Monitoring System"
+    },
+    {
+      "description": "Implemented a Java-based Grep application that recursively scans directory structures and extracts file content matching user-defined regular expression patterns, mimicking core Linux grep functionality. Developed two separate implementations using both imperative programming and Java Streams/lambda expressions to compare readability, maintainability, and performance tradeoffs under different workloads. Utilized Maven for dependency management and packaging, JUnit for automated testing, SLF4J/Logback for application logging, and Docker for containerization and deployment portability.",
+      "git_url": "https://github.com/jarviscanada/jarvis_data_eng_HazemAlsagheer/tree/develop/core_java",
+      "name": "Java Grep App"
     }
   ],
   "name": "Hazem Alsagheer",
@@ -48,19 +53,19 @@
   "professional_experience": [
     {
       "company": "Jarvis",
-      "description": "Delivered multiple system-level projects in a fast-paced engineering program, focusing on Linux, SQL, and containerized infrastructure. Built a distributed monitoring system using Bash agents, PostgreSQL, and Docker to collect and persist real-time resource metrics across a cluster environment. Optimized data ingestion and query performance through structured schema design and SQL tuning. Operated in a sprint-based environment with daily standups and interview-style evaluations, consistently performing under pressure and articulating technical decisions clearly.",
+      "description": "Working in a fast-paced, sprint-driven engineering environment focused on building scalable software and data-driven solutions across multiple technologies and domains. Collaborate with peers through daily standups, technical discussions, and project reviews while consistently delivering projects under tight deadlines. Regularly apply problem-solving, debugging, and system design skills in an iterative development setting, adapting quickly to new tools, frameworks, and engineering concepts while communicating technical decisions clearly.",
       "duration": "2026-present",
       "title": "Data Engineer"
     },
     {
       "company": "Hydro One Inc.",
-      "description": "Developed and maintained Python and SQL-based data pipelines to process and validate enterprise data across enterprise systems. Identified and resolved data inconsistencies through cross-system validation, significantly improving data accuracy and supporting compliance reporting requirements. Built custom queries and reports to deliver actionable insights to stakeholders, enabling better data-driven decision-making across teams. Collaborated with cross-functional teams to manage data access and ensure secure, reliable, and compliant data operations.",
+      "description": "Designed an SQL and Python-based ETL pipeline to spot and resolve data inconsistencies across enterprise systems, saving the company a potential regulatory fine of $1M/day. Wrote complex SQL queries to analyze large datasets and generate actionable insights, enabling stakeholders to make faster, data-driven decisions. Resolved data quality issues at the source across cross-functional systems, improving overall data reliability by 66%. Mentored incoming co-op students on SQL development, system workflows, and best practices, strengthening team efficiency.",
       "duration": "2023-2024",
       "title": "Data Analyst"
     },
     {
       "company": "Toronto Metropolitan University:Cybersecurity Research Lab",
-      "description": "Designed an SQL and Python-based ETL pipeline to spot and resolve data inconsistencies across enterprise systems, saving the company a potential regulatory fine of $1M/day. Wrote complex SQL queries to analyze large datasets and generate actionable insights, enabling stakeholders to make faster, data-driven decisions. Partnered with cross-functional teams to investigate and resolve data quality issues at the source, improving overall system reliability by 66%. Mentored incoming co-op students on SQL development, system workflows, and best practices, strengthening team efficiency and establishing trust as a go-to resource.",
+      "description": "Conducted end-to-end analysis of a BERTopic pipeline on large-scale cybersecurity corpora, evaluating embedding performance and topic coherence. Identified inefficiencies in the default topic selection process, which relied on static parameter choices and led to suboptimal clustering. Designed an interval-based optimization strategy to iteratively evaluate topic counts and cluster configurations, improving coherence and interpretability. Presented findings to senior researchers, contributing to refinement of the modeling approach.",
       "duration": "2024-2025",
       "title": "Research Assistant"
     }
