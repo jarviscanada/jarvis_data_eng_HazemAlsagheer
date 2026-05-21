@@ -1,6 +1,6 @@
 package ca.jrvs.apps.liveCodingPrep;
 
-public class Expense {
+public class Expense{
   private double amount;
   private String category;
   private String date;
