@@ -12,6 +12,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import org.slf4j.Logger;
@@ -22,27 +23,30 @@ public class JavaGrepLambdaImp implements JavaGrepLambda{
   private String regex;
   private String rootPath;
   private String outFile;
+  private Pattern pattern;
 
   @Override
-  public void process() throws IOException{
+  public void process() throws IOException {
     List<String> matchLines;
-    List<File> listOfFiles= this.listFiles(this.rootPath).collect(Collectors.toList());
-    logger.info("Found {} files under {} ", listOfFiles.size(),this.rootPath);
-    logger.info("Reading Files for matches");
-    matchLines=listOfFiles.stream().flatMap(f->{
-      try {
-        List<String> lines = this.readLines(f).filter(this::containsPattern).collect(
-            Collectors.toList());
-        logger.info("{} matches found in {}",lines.size(), f.getName());
-        return lines.stream();
+      try(Stream<File>streamOfFiles=this.listFiles(this.rootPath);) {
+        List<File> listOfFiles = streamOfFiles.collect(Collectors.toList());
+        logger.info("Found {} files under {} ", listOfFiles.size(), this.rootPath);
+        logger.info("Reading Files for matches");
+        matchLines = listOfFiles.stream().flatMap(f -> {
+          try {
+            List<String> lines = this.readLines(f).filter(this::containsPattern).collect(
+                Collectors.toList());
+            logger.info("{} matches found in {}", lines.size(), f.getName());
+            return lines.stream();
 
-      } catch (IOException e) {
+          } catch (IOException e) {
 
-        throw new UncheckedIOException(e);
+            throw new UncheckedIOException(e);
+          }
+        }).collect(Collectors.toList());
+
+        this.writeToFile(matchLines);
       }
-    }).collect(Collectors.toList());
-
-    this.writeToFile(matchLines);
   }
 
   @Override
@@ -72,7 +76,10 @@ public class JavaGrepLambdaImp implements JavaGrepLambda{
 
   @Override
   public boolean containsPattern(String line){
-    return line.matches(this.regex);
+    if (line==null){
+      return false;
+    }
+    return pattern.matcher(line).find();
   }
 
   @Override
@@ -114,7 +121,11 @@ public class JavaGrepLambdaImp implements JavaGrepLambda{
 
   @Override
   public void setRegex(String regex) {
+    if(regex==null){
+      throw new IllegalArgumentException("regex cannot be null!");
+    }
     this.regex = regex;
+    this.pattern=Pattern.compile(regex);
   }
 
   @Override
