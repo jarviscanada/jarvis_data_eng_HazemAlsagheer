@@ -1,0 +1,15 @@
+INFO Starting application
+user=hazem
+DEBUG connection established
+error occurred
+retry_count=5
+WARNING low memory
+path=/var/log/app
+
+key= value with spaces
+key = value with = inside = tricky
+=leadingEquals
+trailingEquals=
+
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=value
+verylongkeynameeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee=value

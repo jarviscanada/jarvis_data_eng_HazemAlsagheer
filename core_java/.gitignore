@@ -1,0 +1,6 @@
+out/
+grep/out
+grep/target
+*.class
+.idea/
+*.iml

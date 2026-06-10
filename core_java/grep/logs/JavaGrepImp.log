@@ -1,0 +1,10 @@
+2026-06-03 02:49:33 INFO  [main] ca.jrvs.apps.grep.JavaGrepImp - Found 7 files under ../../linux_sql 
+2026-06-03 02:49:33 INFO  [main] ca.jrvs.apps.grep.JavaGrepImp - Reading Files for matches
+2026-06-03 02:49:33 INFO  [main] ca.jrvs.apps.grep.JavaGrepImp - 0 matches found in README.md
+2026-06-03 02:49:33 INFO  [main] ca.jrvs.apps.grep.JavaGrepImp - 102 matches found in Linux Diagram.png
+2026-06-03 02:49:33 INFO  [main] ca.jrvs.apps.grep.JavaGrepImp - 16 matches found in host_info.sh
+2026-06-03 02:49:33 INFO  [main] ca.jrvs.apps.grep.JavaGrepImp - 15 matches found in host_usage.sh
+2026-06-03 02:49:33 INFO  [main] ca.jrvs.apps.grep.JavaGrepImp - 5 matches found in psql_docker.sh
+2026-06-03 02:49:33 INFO  [main] ca.jrvs.apps.grep.JavaGrepImp - 0 matches found in ddl.sql
+2026-06-03 02:49:33 INFO  [main] ca.jrvs.apps.grep.JavaGrepImp - 0 matches found in queries.sql
+2026-06-03 02:49:33 INFO  [main] ca.jrvs.apps.grep.JavaGrepImp - Successful write to file: out/out.txt
