@@ -33,19 +33,21 @@
       "description": "Implemented a Java-based Grep application that recursively scans directory structures and extracts file content matching user-defined regular expression patterns, mimicking core Linux grep functionality. Developed two separate implementations using both imperative programming and Java Streams/lambda expressions to compare readability, maintainability, and performance tradeoffs under different workloads. Utilized Maven for dependency management and packaging, JUnit for automated testing, SLF4J/Logback for application logging, and Docker for containerization and deployment portability.",
       "git_url": "https://github.com/jarviscanada/jarvis_data_eng_HazemAlsagheer/tree/develop/core_java",
       "name": "Java Grep App"
+    },
+    {
+      "description": "Developed an end-to-end data analytics solution using Python, Pandas, NumPy, and Matplotlib to analyze over 1M retail transactions for a UK-based online retailer. Performed data cleaning, transformation, customer segmentation using RFM analysis, and exploratory data analysis to uncover customer retention patterns, seasonal sales trends, and geographic revenue distribution. Delivered actionable business recommendations supported by data visualizations and statistical insights, demonstrating the ability to translate raw data into strategic business decisions.",
+      "git_url": "https://github.com/jarviscanada/jarvis_data_eng_HazemAlsagheer/tree/develop/python_data_analytics",
+      "name": "Python Data Analytics"
     }
   ],
   "name": "Hazem Alsagheer",
   "others": [
     {
       "bullets": [
-        "Piano",
-        "Chess",
-        "RockClimbing",
-        "Calisthenics",
-        "Muay Thai",
-        "Soccer",
-        "Basketball"
+        "Piano has been a passion of mine for over 10 years, including performing in concerts and largely teaching myself along the way.",
+        "Chess enthusiast (1600 Elo) who has competed in regional and provincial tournaments.",
+        "Train Muay Thai and calisthenics regularly, with extensive sparring experience and a focus on continuous improvement.",
+        "Enjoy staying active through soccer and rock climbing, having climbed up to V5 bouldering routes."
       ],
       "title": "Activities/Hobbies"
     }
@@ -98,5 +100,5 @@
       "Git"
     ]
   },
-  "summary": "I am a Computer Engineering graduate from Toronto Metropolitan University with experience building data-driven systems at the intersection of analytics and infrastructure. During my time at Hydro One, I developed Python and SQL pipelines to process and validate enterprise data, identifying critical inconsistencies that helped prevent potential regulatory losses. I have also worked in a research setting applying topic modeling techniques to large-scale datasets, where I focused on improving clustering quality through better model evaluation strategies.\n\nWhat excites me about the software industry is building systems that actually work at scale and have real impact. Im especially interested in the data side, where even small improvements in data quality or pipeline design can make a big difference in decision-making. I enjoy understanding how data flows through a system, spotting where things break down, and building solutions that make it more reliable and efficient.\n"
+  "summary": "I am a Computer Engineering graduate from Toronto Metropolitan University with experience building data-driven systems at the intersection of analytics and infrastructure. During my time at Hydro One, I developed Python and SQL pipelines to process and validate enterprise data, identifying critical inconsistencies that helped prevent potential regulatory losses. I have also worked in a research setting applying topic modeling techniques to large-scale datasets, where I focused on improving clustering quality through better model evaluation strategies.\n"
 }
