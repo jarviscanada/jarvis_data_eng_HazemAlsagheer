@@ -2,8 +2,6 @@
 
 I am a Computer Engineering graduate from Toronto Metropolitan University with experience building data-driven systems at the intersection of analytics and infrastructure. During my time at Hydro One, I developed Python and SQL pipelines to process and validate enterprise data, identifying critical inconsistencies that helped prevent potential regulatory losses. I have also worked in a research setting applying topic modeling techniques to large-scale datasets, where I focused on improving clustering quality through better model evaluation strategies.
 
-What excites me about the software industry is building systems that actually work at scale and have real impact. Im especially interested in the data side, where even small improvements in data quality or pipeline design can make a big difference in decision-making. I enjoy understanding how data flows through a system, spotting where things break down, and building solutions that make it more reliable and efficient.
-
 
 ## Skills
 
@@ -21,6 +19,8 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_HazemAlsag
 **Linux Cluster Monitoring System** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_HazemAlsagheer/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_HazemAlsagheer/tree/develop/linux_sql)]: Built a lightweight Linux cluster monitoring system where each node collects hardware specifications and real-time resource metrics and sends them to a centralized PostgreSQL database. Designed the system to give administrators clear visibility into CPU, memory, and disk usage for better resource allocation and capacity planning. Implemented a Bash-based agent using tools like vmstat and df, with data ingestion handled through a containerized database deployed via Docker. Automated data collection with cron and validated accuracy through script testing and SQL-based analysis.
 
 **Java Grep App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_HazemAlsagheer/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_HazemAlsagheer/tree/develop/core_java)]: Implemented a Java-based Grep application that recursively scans directory structures and extracts file content matching user-defined regular expression patterns, mimicking core Linux grep functionality. Developed two separate implementations using both imperative programming and Java Streams/lambda expressions to compare readability, maintainability, and performance tradeoffs under different workloads. Utilized Maven for dependency management and packaging, JUnit for automated testing, SLF4J/Logback for application logging, and Docker for containerization and deployment portability.
+
+**Python Data Analytics** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_HazemAlsagheer/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_HazemAlsagheer/tree/develop/python_data_analytics)]: Developed an end-to-end data analytics solution using Python, Pandas, NumPy, and Matplotlib to analyze over 1M retail transactions for a UK-based online retailer. Performed data cleaning, transformation, customer segmentation using RFM analysis, and exploratory data analysis to uncover customer retention patterns, seasonal sales trends, and geographic revenue distribution. Delivered actionable business recommendations supported by data visualizations and statistical insights, demonstrating the ability to translate raw data into strategic business decisions.
 
 
 ## Highlighted Projects
@@ -45,10 +45,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_HazemAlsag
 
 
 ## Miscellaneous
-- Piano
-- Chess
-- RockClimbing
-- Calisthenics
-- Muay Thai
-- Soccer
-- Basketball
+- Piano has been a passion of mine for over 10 years, including performing in concerts and largely teaching myself along the way.
+- Chess enthusiast (1600 Elo) who has competed in regional and provincial tournaments.
+- Train Muay Thai and calisthenics regularly, with extensive sparring experience and a focus on continuous improvement.
+- Enjoy staying active through soccer and rock climbing, having climbed up to V5 bouldering routes.
