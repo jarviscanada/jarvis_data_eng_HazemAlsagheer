@@ -1,15 +1,15 @@
 # Hazem Alsagheer . Jarvis Consulting
 
-I am a Computer Engineering graduate from Toronto Metropolitan University with experience building data-driven systems at the intersection of analytics and infrastructure. During my time at Hydro One, I developed Python and SQL pipelines to process and validate enterprise data, identifying critical inconsistencies that helped prevent potential regulatory losses. I have also worked in a research setting applying topic modeling techniques to large-scale datasets, where I focused on improving clustering quality through better model evaluation strategies.
+I am a Computer Engineering graduate from Toronto Metropolitan University with experience building data-driven systems at the intersection of analytics and infrastructure. During my time at Hydro One, I developed Python and SQL pipelines to process and validate enterprise data, identifying critical inconsistencies that helped prevent potential regulatory losses. I have also worked in a research setting applying topic modeling techniques to large-scale datasets, where I focused on improving clustering quality through better model evaluation strategies. More recently, I gained hands-on experience with Databricks by building an end-to-end data engineering project using PySpark and the Medallion Architecture, while also earning the Databricks Data Engineer Associate certification.
 
 
 ## Skills
 
-**Proficient:** Python, RDBMS/SQL (PostgreSQL, MS SQL Server), Data Modeling (Normalization, ERD Design), ETL Pipeline, Data Analysis (pandas, NumPy), FastAPI, Data Structres & Algorithms, Git
+**Proficient:** Python, RDBMS/SQL, Spark, Databricks, ETL Pipeline, Data Modeling, pandas, NumPy, FastAPI, Data Structres & Algorithms, Git
 
-**Competent:** Docker, AWS (EC2, deployment), Machine Learning, JavaScript, TypeScript, React.js, Java
+**Competent:** Docker, Cloud (AWS, Azure, GCP), Machine Learning, JavaScript, TypeScript, React.js, Java
 
-**Familiar:** Linux/Bash, C/C++, GCP, VBA, Networking
+**Familiar:** Linux/Bash, Nginx, C/C++, VBA, Networking
 
 ## Jarvis Projects
 
@@ -21,6 +21,8 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_HazemAlsag
 **Java Grep App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_HazemAlsagheer/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_HazemAlsagheer/tree/develop/core_java)]: Implemented a Java-based Grep application that recursively scans directory structures and extracts file content matching user-defined regular expression patterns, mimicking core Linux grep functionality. Developed two separate implementations using both imperative programming and Java Streams/lambda expressions to compare readability, maintainability, and performance tradeoffs under different workloads. Utilized Maven for dependency management and packaging, JUnit for automated testing, SLF4J/Logback for application logging, and Docker for containerization and deployment portability.
 
 **Python Data Analytics** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_HazemAlsagheer/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_HazemAlsagheer/tree/develop/python_data_analytics)]: Developed an end-to-end data analytics solution using Python, Pandas, NumPy, and Matplotlib to analyze over 1M retail transactions for a UK-based online retailer. Performed data cleaning, transformation, customer segmentation using RFM analysis, and exploratory data analysis to uncover customer retention patterns, seasonal sales trends, and geographic revenue distribution. Delivered actionable business recommendations supported by data visualizations and statistical insights, demonstrating the ability to translate raw data into strategic business decisions.
+
+**Databricks Data Engineering Project** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_HazemAlsagheer/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_HazemAlsagheer/tree/develop/databricks_fundamentals)]: Designed and implemented an end-to-end data engineering pipeline in Databricks using PySpark and the Medallion Architecture (Bronze, Silver, Gold) to process transactional and customer data from multiple sources. Built scalable ETL pipelines to ingest, cleanse, transform, and model data into Delta tables optimized for analytics. Leveraged Spark SQL and PySpark DataFrame transformations for data validation, aggregations, window functions, and business metric calculations. Delivered analytics-ready datasets and interactive dashboards that identified fraud patterns, customer behavior trends, and key business insights.
 
 
 ## Highlighted Projects
@@ -45,7 +47,8 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_HazemAlsag
 
 
 ## Miscellaneous
+- Databricks Certified Data Engineer Associate.
 - Piano has been a passion of mine for over 10 years, including performing in concerts and largely teaching myself along the way.
-- Chess enthusiast (1600 Elo) who has competed in regional and provincial tournaments.
+- Chess enthusiast (1730 Elo) who has competed in regional and provincial tournaments.
 - Train Muay Thai and calisthenics regularly, with extensive sparring experience and a focus on continuous improvement.
 - Enjoy staying active through soccer and rock climbing, having climbed up to V5 bouldering routes.
